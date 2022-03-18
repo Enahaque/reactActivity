@@ -16,25 +16,25 @@ class App extends Component {
   }
 }
 export default App;
-
-// start here;
+// my activities start here;
 function Counter(){
+  const [count,setCount] = useState(33);
+  //Pluse field;
+  const Pluse = () =>{
+    const newCount = count + 1;
+    setCount(newCount);
 
-const [count,setCount] = useState(0);
-const increaseCount = () =>{
-  const newCount = count + 1;
-  setCount(newCount);
-}
-const decreaseCount = () =>{
-  const newCount = count - 1;
-  setCount(newCount);
-}
-
+  }
+  const Minus = () =>{
+    const newCount = count - 1;
+    setCount(newCount);
+  }
   return(
-    <div className='countField'>
-      <h2>Count:{count}</h2>
-      <button onClick={increaseCount}>Increase</button>
-      <button onClick={decreaseCount}>Decrease</button>
+    <div className='counterField'>
+      <h1>Count:{count}</h1>
+      <button onClick={Pluse}>Pluse</button>
+      <button onClick={Minus}>Minus</button>
+      
     </div>
   )
 }
